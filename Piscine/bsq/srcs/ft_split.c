@@ -96,9 +96,7 @@ char	**ft_splitter(char *str, char *charset, char **result)
 char	**ft_split(char *str, char *charset)
 {
 	char	**result;
-	int		numwords;
 
-	numwords = c_words(str, charset);
 	result = (char **) malloc (sizeof(char *) * (c_words(str, charset) + 1));
 	if (!result)
 		return (NULL);
