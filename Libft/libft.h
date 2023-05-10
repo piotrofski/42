@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:14:31 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/08 20:38:29 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:39:35 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,12 @@ int	ft_atoi(const char *nptr);
 char	*ft_strdup(const char *src);
 void *ft_calloc(unsigned int nmemb, unsigned int size);
 void *ft_memccpy(void *dest, const void *src, int c, unsigned int n);
+char	*ft_itoa(int n);
+char *ft_strjoin(char const *s1, char const *s2);
+char	**ft_split(char const *s, char c);
+char *ft_substr(char const *s, unsigned int start, unsigned int len);
+char *ft_strtrim(char const *s1, char const *set);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif

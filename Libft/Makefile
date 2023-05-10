@@ -21,7 +21,14 @@ SRC = ./ft_isalpha.c\
 	  ./ft_atoi.c\
 	  ./ft_strdup.c\
 	  ./ft_calloc.c\
-	  ./ft_memccpy.c
+	  ./ft_memccpy.c\
+	  ./ft_itoa.c\
+	  ./ft_strjoin.c\
+	  ./ft_split.c\
+	  ./ft_substr.c\
+	  ./ft_strtrim.c\
+	  ./ft_strmapi.c\
+	  ./ft_striteri.c
 
 HEADR = libft.h
 
