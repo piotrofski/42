@@ -6,13 +6,21 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:50:36 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/10 17:03:10 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 16:38:30 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *c);
+int	ft_strlen(char *c)
+{
+	int 	i;
+
+	i = 0;
+	while (c[i])
+		i++;
+	return (i);
+}
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -32,16 +40,25 @@ char	*ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*res;
+	int	len_s1;
+	int len_s2;
+	int i;
 
-	res = malloc(sizeof(char) * (ft_strlen((char *)s1) + ft_strlen((char *)s2) ) + 1);
+	i = 0;
+	len_s1 = ft_strlen((char *) s1);
+	len_s2 = ft_strlen((char *) s2);
+	res = malloc(sizeof(char) * (len_s1 + len_s2) + 1);
 	if (!res)
 		return (NULL);
-	res[0] = '\0';
-	res = ft_strcat((char *)s1, (char *)s2);
+	while (s1[i])
+	{
+		res[i] = s1[i];
+		i++; 
+	}
+	res = ft_strcat(res, (char *)s2);
 	return (res);
 }
 /*

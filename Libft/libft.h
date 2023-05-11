@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:14:31 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/10 16:39:35 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 16:33:33 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,11 @@ char *ft_substr(char const *s, unsigned int start, unsigned int len);
 char *ft_strtrim(char const *s1, char const *set);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_striteri(char *s, void (*f)(unsigned int, char *));
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n , int fd);
+char *ft_strcat(char *dest, char *src);
+char *ft_strcpy(char *dest, const char *src);
 
 #endif
