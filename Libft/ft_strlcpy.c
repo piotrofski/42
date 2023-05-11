@@ -6,16 +6,13 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:00:06 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 16:30:10 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:29:38 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int	ft_strlen(char *str);
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 

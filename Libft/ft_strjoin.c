@@ -6,21 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:50:36 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/11 16:38:30 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:29:08 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(char *c)
-{
-	int 	i;
-
-	i = 0;
-	while (c[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -48,8 +38,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	int i;
 
 	i = 0;
-	len_s1 = ft_strlen((char *) s1);
-	len_s2 = ft_strlen((char *) s2);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
 	res = malloc(sizeof(char) * (len_s1 + len_s2) + 1);
 	if (!res)
 		return (NULL);

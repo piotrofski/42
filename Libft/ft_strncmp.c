@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apiotrau <apiotrau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:15:58 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/03 18:16:07 by apiotrau         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:23:44 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	unsigned int	i;
 	unsigned char	*c1;

@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apiotrau <apiotrau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:15:53 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/03 19:30:31 by apiotrau         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:14:35 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apiotrau <apiotrau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:39:37 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/03 17:44:01 by apiotrau         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:25:55 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c);
+#include "libft.h"
 
 int	ft_tolower(int	c)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apiotrau <apiotrau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:22:32 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/03 17:44:27 by apiotrau         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:26:02 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c);
+#include "libft.h"
 
 int	ft_toupper(int	c)
 {

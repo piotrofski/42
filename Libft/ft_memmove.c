@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:45:29 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/08 20:38:27 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:14:37 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void	*dest, const void	*src, unsigned int	n);
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, unsigned int n)
 {

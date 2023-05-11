@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apiotrau <apiotrau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:02:13 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/03 16:42:44 by apiotrau         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:12:27 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void    ft_bzero(void *s, unsigned int n)
 {

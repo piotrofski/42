@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: apiotrau <apiotrau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:30:39 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/03 19:55:20 by apiotrau         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:25:08 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str);
+#include "libft.h"
 
 int comp_str(char c1, char c2)
 {
