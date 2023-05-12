@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 04:06:19 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 19:12:18 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/12 19:59:48 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,6 @@ int	ft_printf(const char *format, ...)
 int main()
 {
 	char *ptr = "suis Ariel!";
-	ft_printf("Salut je %s", ptr);
+	ft_printf("Salut je %s et je suis %s", ptr, ptr);
 	return 0;
 }
