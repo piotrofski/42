@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 04:06:19 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 06:30:57 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/12 19:12:18 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,29 +29,64 @@ void send_to_func(int index, va_list arg)
 	va_end(arg);
 }
 
+t_print *ft_initialise_tab(t_print *tab)
+{
+	tab->width = 0;
+	tab->precision = 0;
+	tab->zero = 0;
+	tab->dot = 0;
+	tab->dash = 0;
+	tab->total_length = 0;
+	tab->sign = 0;
+	tab->is_zero = 0;
+	tab->percent = 0;
+	tab->space = 0;
+	return (tab);
+}
+
+void ft_check_format(const char *format, int i, t_print *tab)
+{
+	char *convrt;
+	int	index;
+
+	convrt = "cspdiuxX%";
+	index = 0;
+	while (convrt[index] != format[i])
+		index++;
+	if (convrt[index] == '\0')
+	 	write(1, &format[i - 1], 1);
+	else
+		send_to_func(index, tab->arg);
+}
+
 int	ft_printf(const char *format, ...)
 {
-	va_list arg;
-	va_start(arg, format);
-	char *convrt;
-	int index;
+	t_print *tab;
+	int	i;
 
-	index = 0;
-	convrt = "cspdiuxX%";
-	while (*format != '\0')
+	tab = malloc(sizeof(t_print));
+	if (!tab)
+		return (-1);
+	ft_initialise_tab(tab);
+	va_start(tab->arg, format);
+	i = -1;
+	while (format[++i] != '\0')
 	{
-		if (*format == '%')
+		if (format[i] == '%')
 		{
-			format++;
-			while (convrt[index] != *format)
-				index++;
-			send_to_func(index, arg);
-			index = 0;
+			ft_check_format(format, i + 1, tab);
+			i++;
 		}
 		else
-			printf("%c", *format);
-		format++;
+			printf("%c", format[i]);
 	}
-	va_end(arg);
-	return (0);
+	va_end(tab->arg);
+	return (0); //need to change
+}
+
+int main()
+{
+	char *ptr = "suis Ariel!";
+	ft_printf("Salut je %s", ptr);
+	return 0;
 }

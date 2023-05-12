@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 04:13:17 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 06:30:37 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/12 18:12:47 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,21 @@
 # include <stdio.h>
 # include <stddef.h>
 # include <stdarg.h>
+
+typedef struct s_print
+{
+	va_list arg;
+	int	width;
+	int precision;
+	int zero;
+	int dot;
+	int dash;
+	int total_length;
+	int sign;
+	int is_zero;
+	int percent;
+	int space;
+} t_print;
 
 int			ft_printf(const char *format, ...);
 

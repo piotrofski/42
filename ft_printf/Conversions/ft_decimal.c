@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 05:44:55 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 06:31:42 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/12 18:36:37 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_decimal(va_list arg)
 {
-	double f = va_arg(arg, double);
-	printf("%f\n", f);
+	int f = va_arg(arg, int);
+	printf("%d\n", f);
 	va_end(arg);
 }
