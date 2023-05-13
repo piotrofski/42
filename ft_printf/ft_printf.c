@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 04:06:19 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/13 20:40:03 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/13 20:49:28 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,10 @@ int	ft_printf(const char *format, ...)
 int main()
 {
 	char c = 'a';
-	int res = ft_printf("%c\n", c);
+	int res = ft_printf("%c", c);
 	//int res2 = printf("%c\n", c);
 
-	printf("mine:\t%d\n", res);
+	printf("\nmine:\t%d\n", res);
 	//printf("true:\t%d\n", res2);
 	return (0);
 }
