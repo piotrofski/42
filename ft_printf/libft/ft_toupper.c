@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 04:13:17 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/13 20:37:53 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/03 17:22:32 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:26:02 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
-# include <limits.h>
-
-typedef struct s_print
+int	ft_toupper(int	c)
 {
-	int	width;
-	int total_length;
-} t_print;
-
-int			ft_printf(const char *format, ...);
-
-#endif
+	if (ft_isalpha(c) == 0)
+		return (c);
+	if (c < 123 && c > 96)	
+		return c - 32;
+	return (c);
+}

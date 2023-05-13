@@ -6,40 +6,54 @@
 #    By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 04:14:24 by piotroff          #+#    #+#              #
-#    Updated: 2023/05/12 19:57:03 by piotroff         ###   ########.fr        #
+#    Updated: 2023/05/13 20:40:54 by piotroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ./ft_printf.c\
-	./Conversions/ft_integer.c\
-	./Conversions/ft_string.c\
-	./Conversions/ft_character.c\
-	./Conversions/ft_hexconv.c\
-	./Conversions/ft_decimal.c\
-	./Conversions/ft_unsigned_dec.c\
-	./Conversions/ft_hex_min.c\
-	./Conversions/ft_hex_max.c\
-	./Conversions/ft_percent.c
-
+# Nom du projet
 NAME = libftprintf.a
 
-OBJ = $(SRC:.c=.o)
+# Compilateur
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	cc -Wall -Wextra -Werror -c $< -o $@
+# Fichiers sources
+SRCS = ft_printf.c \
+	   # Ajouter ici les autres fichiers source de ft_printf
 
-all: $(NAME)
+# Fichiers objets
+OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-	cc -Wall -Wextra -Werror ${NAME} -o exec
+# Inclusion des fichiers header
+INCLUDES = -I./libft
+LIBS = -L./libft -lft
+
+# Compilation de libft
+LIBFT_DIR = libft
+LIBFT = $(LIBFT_DIR)/libft.a
+
+# Règle de compilation de tous les fichiers de ft_printf
+all: $(LIBFT) $(NAME)
+
+$(LIBFT):
+	@make -C $(LIBFT_DIR)
+
+# Règle de compilation de ft_printf
+$(NAME): $(LIBFT) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(INCLUDES) -o $@ $(OBJS) $(LIBS) -o exec
 	./exec
-	
+
+# Règle de nettoyage des fichiers objets
 clean:
-	/bin/rm -f $(OBJ)
+	rm -f $(OBJS)
+	make clean -C $(LIBFT_DIR)
 
+# Règle de nettoyage du projet
 fclean: clean
-	/bin/rm -f $(NAME)
-	/bin/rm -f ./exec
+	rm -f $(NAME)
+	make fclean -C $(LIBFT_DIR)
+	rm -f ./exec
 
+# Règle de recompilation complète du projet
 re: fclean all

@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 04:13:17 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/13 20:37:53 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/11 15:53:04 by piotroff          #+#    #+#             */
+/*   Updated: 2023/05/11 15:54:15 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
-# include <limits.h>
-
-typedef struct s_print
+void ft_putendl_fd(char *s, int fd)
 {
-	int	width;
-	int total_length;
-} t_print;
-
-int			ft_printf(const char *format, ...);
-
-#endif
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}

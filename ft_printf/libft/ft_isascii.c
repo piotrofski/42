@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 04:13:17 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/13 20:37:53 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/02 12:16:00 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:14:39 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
-# include <limits.h>
-
-typedef struct s_print
+int ft_isascii(int c)
 {
-	int	width;
-	int total_length;
-} t_print;
-
-int			ft_printf(const char *format, ...);
-
-#endif
+    if (c < 0 || c > 127)
+			return (0);
+	return (1);
+}

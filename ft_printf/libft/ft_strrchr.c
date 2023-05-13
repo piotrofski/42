@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 04:13:17 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/13 20:37:53 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/03 18:38:47 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:25:15 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
-# include <limits.h>
-
-typedef struct s_print
+char *ft_strrchr(const char *s, int c)
 {
-	int	width;
-	int total_length;
-} t_print;
+	int	i;
+	char *sDup;
 
-int			ft_printf(const char *format, ...);
-
-#endif
+	sDup = (char *)s;
+	i = ft_strlen(sDup);
+	while (i >= 0)
+	{
+		if (sDup[i] == c)
+			return (&sDup[i]);
+		i--;
+	}
+	return (NULL);
+}

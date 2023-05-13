@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hex_min.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:53:14 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 18:39:20 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/11 21:05:59 by piotroff          #+#    #+#             */
+/*   Updated: 2023/05/11 21:09:09 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void ft_hex_min(va_list arg)
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	unsigned int x = va_arg(arg, unsigned int);
-	printf("%x\n", x);
-	va_end (arg);
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_string.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:16:55 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 06:31:25 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/11 19:59:56 by piotroff          #+#    #+#             */
+/*   Updated: 2023/05/11 20:05:43 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void ft_string(va_list arg)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	char *s = va_arg(arg, char *);
-	printf("%s\n", s); //pustr + endl	
-	va_end(arg);
+	if(lst)
+	{
+		if (*lst)
+			new->next = *lst;
+		*lst = new;
+	}
 }

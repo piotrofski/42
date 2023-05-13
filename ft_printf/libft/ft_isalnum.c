@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_integer.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:11:05 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 18:12:49 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/02 12:14:20 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:12:25 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void ft_integer(va_list arg)
+int	ft_isalnum(int c)
 {
-	int i = va_arg(arg, int);
-	printf("%i\n", i); //putnbr + endl	
-	va_end(arg);
+    if (ft_isalpha(c)|| ft_isdigit(c))
+			return (1);
+	return (0);
 }

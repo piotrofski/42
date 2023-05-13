@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexconv.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:25:36 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 18:39:06 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/11 21:14:13 by piotroff          #+#    #+#             */
+/*   Updated: 2023/05/11 21:21:24 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void	ft_hexconv(va_list arg)
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void	*p = va_arg(arg, void *);
-	printf("%p\n", p);
-	va_end(arg);
+	t_list *new_lst;
+
+	while (lst)
+	{
+		new_lst->content = f(lst->content); //malloc somewhere
+		lst = lst->next;
+	}
+	return (new_lst);
 }

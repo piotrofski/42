@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_character.c                                     :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:16:04 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 06:31:45 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/02 12:17:26 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:14:35 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void ft_character(va_list arg)
+int ft_isprint(int c)
 {
-	int i = va_arg(arg, int);
-	printf("%c\n", i); //putchar + endl	
-	va_end(arg);
+    if (c < 32 || c > 126)
+			return (0);
+	return (1);
 }

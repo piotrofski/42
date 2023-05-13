@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 04:13:17 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/13 20:37:53 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/02 12:18:20 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:31:58 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
-# include <limits.h>
-
-typedef struct s_print
+int ft_strlen(const char *c)
 {
-	int	width;
-	int total_length;
-} t_print;
+    int i;
 
-int			ft_printf(const char *format, ...);
-
-#endif
+    i = 0;
+    while(c[i] != '\0')
+        i++;
+    return (i);
+}

@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hex_max.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:53:55 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 18:39:32 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/03 17:00:06 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:29:38 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void ft_hex_max(va_list arg)
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
-	unsigned int x = va_arg(arg, unsigned int);
-	printf("%X\n", x);
-	va_end (arg);
+	unsigned int	i;
+
+	i = 0;
+	if (size != 0)
+	{
+		while (src[i] != '\0' && i < size - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return (ft_strlen(src));
 }

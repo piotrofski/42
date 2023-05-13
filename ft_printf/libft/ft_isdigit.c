@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_percent.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:54:11 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 06:31:27 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/02 12:12:57 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:14:34 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void ft_percent(va_list arg)
+int ft_isdigit(int c)
 {
-	int x = va_arg(arg, int);
-	x = x + 1;
-	printf("%c\n", '%');
-	va_end (arg);
+    if (c < '0' || c > '9')
+			return (0);
+	return (1);
 }

@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 04:13:17 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/13 20:37:53 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/11 20:42:20 by piotroff          #+#    #+#             */
+/*   Updated: 2023/05/11 20:52:38 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <fcntl.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stddef.h>
-# include <stdarg.h>
-# include <limits.h>
-
-typedef struct s_print
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	width;
-	int total_length;
-} t_print;
+	t_list *last;
 
-int			ft_printf(const char *format, ...);
-
-#endif
+	if(lst)
+		{
+			if (*lst)
+			{
+				last = ft_lstlast(*lst);
+				last->next = new;
+			}
+			else
+				*lst = new;
+		}
+}

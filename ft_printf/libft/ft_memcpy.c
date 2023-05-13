@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_decimal.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 05:44:55 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/12 18:36:37 by piotroff         ###   ########.fr       */
+/*   Created: 2023/05/03 16:45:23 by apiotrau          #+#    #+#             */
+/*   Updated: 2023/05/11 19:14:36 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "libft.h"
 
-void	ft_decimal(va_list arg)
+void	*ft_memcpy(void	*dest, const void	*src, unsigned int	n)
 {
-	int f = va_arg(arg, int);
-	printf("%d\n", f);
-	va_end(arg);
+	char	*d; 
+	char	*s;
+	int			i;
+
+	d = (char *)dest;
+	s = (char *)src;
+	i = 0;
+	while (n > 0)
+	{
+		d[i] = s[i];
+		n--;
+		i++;
+	}
+	return (dest);
 }
