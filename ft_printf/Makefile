@@ -6,7 +6,7 @@
 #    By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 04:14:24 by piotroff          #+#    #+#              #
-#    Updated: 2023/05/13 20:47:33 by piotroff         ###   ########.fr        #
+#    Updated: 2023/05/14 02:24:14 by piotroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ $(NAME): $(LIBFT) $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $@ $(OBJS) $(LIBS) -o exec
 	./exec
 
+
 clean:
 	rm -f $(OBJS)
 	make clean -C $(LIBFT_DIR)
@@ -43,6 +44,17 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 	make fclean -C $(LIBFT_DIR)
-	rm -f ./exec
+	rm ./exec
 
 re: fclean all
+
+.PHONY: all clean fclean re
+
+libft_all:
+	@make -C $(LIBFT_DIR) all
+
+libft_clean:
+	@make -C $(LIBFT_DIR) clean
+
+libft_fclean:
+	@make -C $(LIBFT_DIR) fclean
