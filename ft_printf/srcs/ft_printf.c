@@ -6,12 +6,12 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 04:06:19 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/14 17:02:26 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:19:23 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include "./libft/libft.h"
+#include "../includes/libftprintf.h"
+#include "../includes/libft.h"
 
 void ft_putchar(char c)
 {
@@ -276,8 +276,6 @@ int	ft_printf(const char *format, ...)
 
 int main()
 {
-	int res = ft_printf("ariel%i\n", -12);
-	int res2 = printf("ariel%d\n", -12);
 	int num = 42;
 	unsigned int u1 = 42;
     unsigned int u2 = -42;
@@ -287,9 +285,11 @@ int main()
     unsigned int x2 = 0xDEADBEEF;
 	unsigned int x3 = 0xABCD;
     unsigned int x4 = 0xDEADBEEF;
-	int result = ft_printf("\nmine:\t%d\t%i\t%u\t%u\t%p\t%p\t%x\t%x\t%X\t%X\t%%\n", res, num, u1, u2, ptr1, ptr2,  x1, x2, x3, x4);
-	int resul2 = printf("\ntrue:\t%d\t%i\t%u\t%u\t%p\t%p\t%x\t%x\t%X\t%X\t%%\n", res2, num, u1, u2, ptr1, ptr2, x1, x2, x3, x4);
+	int result = ft_printf("mine:\t%i\t%u\t%u\t%p\t%p\t%x\t%x\t%X\t%X\t%%\n", num, u1, u2, ptr1, ptr2,  x1, x2, x3, x4);
+	int resul2 = printf("true:\t%i\t%u\t%u\t%p\t%p\t%x\t%x\t%X\t%X\t%%\n", num, u1, u2, ptr1, ptr2, x1, x2, x3, x4);
 
+	ft_printf("mine = %d\n", result);
+	ft_printf("true = %d\n", resul2);
 	printf("mine = %d\n", result);
 	printf("true = %d\n", resul2);
 	return (0);

@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:32:25 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/10 16:21:17 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:14:28 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	char_is_sep(char s, char c)
 {

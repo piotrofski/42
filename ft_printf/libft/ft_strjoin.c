@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:50:36 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/11 19:29:08 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:14:39 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strcat(char *dest, char *src)
 {

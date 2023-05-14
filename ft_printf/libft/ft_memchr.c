@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:00:48 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/08 20:38:26 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:13:56 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void *ft_memchr(const void *s, int c, unsigned int n)
 {

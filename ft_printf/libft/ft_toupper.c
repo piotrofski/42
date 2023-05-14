@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:22:32 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:26:02 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:15:21 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	ft_toupper(int	c)
 {

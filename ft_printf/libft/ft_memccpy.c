@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 19:11:23 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/08 20:38:26 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:13:53 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void *ft_memccpy(void *dest, const void *src, int c, unsigned int n)
 {

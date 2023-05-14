@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:02:13 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:12:27 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:12:52 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void    ft_bzero(void *s, unsigned int n)
 {

@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:45:55 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/11 15:48:59 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:14:17 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void ft_putchar_fd(char c, int fd)
 {

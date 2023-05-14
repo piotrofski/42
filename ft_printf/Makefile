@@ -6,7 +6,7 @@
 #    By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/12 04:14:24 by piotroff          #+#    #+#              #
-#    Updated: 2023/05/14 02:24:14 by piotroff         ###   ########.fr        #
+#    Updated: 2023/05/14 17:06:34 by piotroff         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = libftprintf.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = ft_printf.c \
+SRCS = ./srcs/*.c
 
 OBJS = $(SRCS:.c=.o)
 

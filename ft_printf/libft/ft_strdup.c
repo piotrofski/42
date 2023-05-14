@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:09:38 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:16:49 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:14:34 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strdup(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:38:47 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:25:15 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:15:09 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {

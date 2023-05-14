@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:56:46 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/11 19:30:23 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:15:12 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char *ft_strtrim(char const *s1, char const *set)
 {

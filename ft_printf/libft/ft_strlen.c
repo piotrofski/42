@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 12:18:20 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:31:58 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:14:50 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int ft_strlen(const char *c)
 {

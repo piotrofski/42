@@ -6,11 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:45:30 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/11 16:15:04 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:13:15 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int	count_digits(long nb)
 {

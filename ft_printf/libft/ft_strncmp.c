@@ -6,9 +6,11 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:15:58 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:23:44 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/14 17:15:01 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../includes/libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
