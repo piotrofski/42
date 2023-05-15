@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:46:20 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/15 18:25:02 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 18:42:17 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	res = malloc (sizeof (char ) * (len + 1));
 	if (!res)
+		return (NULL);
+	if(!s)
 		return (NULL);
 	while (s[start] && len)
 	{
