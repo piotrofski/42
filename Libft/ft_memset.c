@@ -6,13 +6,13 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 12:20:08 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:14:38 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 18:29:18 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memset(void *s, int c, unsigned int n)
+void    *ft_memset(void *s, int c, size_t n)
 {
     int i;
 

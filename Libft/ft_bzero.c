@@ -6,18 +6,18 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:02:13 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/11 19:12:27 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 17:55:25 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, unsigned int n)
+void    ft_bzero(void *s, size_t n)
 {
     int i;
-
+    
+    char *p = (char *)s;
     i = 0;
-    char *p = s;
     while (n > 0)
     {
         p[i] = '\0';

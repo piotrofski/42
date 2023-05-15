@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 20:09:57 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/11 20:12:45 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 18:17:14 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ t_list *ft_lstlast(t_list *lst)
 
 	i = 0;
 	size = ft_lstsize(lst);
+	if(!lst)
+		return (NULL);
 	while (i < size - 1)
 	{
 		lst = lst->next;

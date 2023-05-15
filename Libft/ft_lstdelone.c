@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 20:52:56 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/11 20:57:15 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 18:16:27 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst)
-	{
-		(*del)(lst->content);
-		free(lst);
-	}
+	if (!lst || !del)
+		return;
+	(*del)(lst->content);
+	free(lst);
 }
