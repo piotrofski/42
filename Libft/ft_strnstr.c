@@ -6,7 +6,7 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:30:39 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/15 18:38:53 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 20:02:06 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int comp_str(char c1, char c2)
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int	i;
-	int	j;
+	size_t j;
 	int	dlen;
 	char *b;
 	char *l;
