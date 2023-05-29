@@ -6,13 +6,14 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:15:53 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/14 17:13:59 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 18:30:20 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned int	i;
 	unsigned char	*c1;

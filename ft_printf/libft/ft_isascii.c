@@ -6,11 +6,12 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 12:16:00 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/14 17:13:04 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:14:39 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
 int ft_isascii(int c)
 {

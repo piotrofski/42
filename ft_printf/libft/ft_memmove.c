@@ -6,13 +6,14 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:45:29 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/14 17:14:10 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 18:29:36 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char *to = (char *)dest;
 	char *from = (char *)src;

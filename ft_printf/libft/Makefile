@@ -33,7 +33,8 @@ SRC = ./ft_isalpha.c\
 	  ./ft_putstr_fd.c\
 	  ./ft_putendl_fd.c\
 	  ./ft_putnbr_fd.c\
-	  ./ft_lstnew.c\
+
+BONUS = ./ft_lstnew.c\
 	  ./ft_lstadd_front.c\
 	  ./ft_lstsize.c\
 	  ./ft_lstlast.c\
@@ -41,13 +42,15 @@ SRC = ./ft_isalpha.c\
 	  ./ft_lstdelone.c\
 	  ./ft_lstclear.c\
 	  ./ft_lstiter.c\
-	  
+	  ./ft_lstmap.c\
 
 HEADR = libft.h
 
 NAME = libft.a
 
 OBJ = $(SRC:.c=.o)
+
+BONUS_OBJ = $(BONUS:.c=.o)
 
 .c.o:
 	cc -Wall -Wextra -Werror -c $< -o $@
@@ -58,9 +61,14 @@ $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 clean:
-	/bin/rm -f $(OBJ)
+	/bin/rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	/bin/rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
+
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
+
+.PHONY: all clean fclean re bonus

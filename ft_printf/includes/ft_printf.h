@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <unistd.h>
 # include <fcntl.h>
@@ -27,6 +27,25 @@ typedef struct s_print
 	int total_length;
 } t_print;
 
+void ft_putchar(char c);
+void ft_putstr(char *s);
+int     count_digs(unsigned int nb);
+char    *ft_utoa(unsigned int n);
+int	count_digs_base(unsigned long nb, int base_len);
+char    *ft_ultoa_base(unsigned long n, char *base);
+void ft_c(va_list arg, t_print *tab);
+void ft_s(va_list arg, t_print *tab);
+void ft_p(va_list arg, t_print *tab);
+void ft_d(va_list arg, t_print *tab);
+void ft_i(va_list arg, t_print *tab);
+void ft_u(va_list arg, t_print *tab);
+void ft_x(va_list arg, t_print *tab);
+void ft_X(va_list arg, t_print *tab);
+void ft_perc(va_list arg, t_print *tab);
+void ft_dispatch(int i, va_list arg, t_print *tab);
+void ft_check_flag(char c, va_list arg, t_print *tab);
+char *ft_strchr_mod(const char *s);
+const char *ft_read(const char *format, t_print *tab);
 int			ft_printf(const char *format, ...);
 
 #endif

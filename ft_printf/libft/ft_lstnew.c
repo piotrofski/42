@@ -6,11 +6,12 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 19:48:21 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/14 17:13:46 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/15 17:47:00 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
 t_list	*ft_lstnew(void *content)
 { 

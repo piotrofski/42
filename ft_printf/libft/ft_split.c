@@ -6,109 +6,69 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:32:25 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/14 17:14:28 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:21:17 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
-int	char_is_sep(char s, char c)
+static int	numwords(char const *s, char c)
 {
-	if (s == c)
-		return (1);
-	return (0);
-}
+	int	cur;
+	int	word_num;
 
-char	*ft_strdup_mod(char const *s, char c, int start)
-{
-	char	*new_str;
-	int		i;
-
-	i = 0;
-	while (char_is_sep(s[start + i], c) == 0 && s[i])
-		i++;
-	new_str = (char *)malloc(sizeof (char) * (i + 1));
-	if (!new_str)
-		return (0);
-	i = 0;
-	while (char_is_sep(s[start], c) == 0 && s[i])
+	cur = 0;
+	word_num = 0;
+	while (s[cur] != 0)
 	{
-		new_str[i] = s[start];
-		i++;
-		start++;
+		if (s[cur] != c && (s[cur + 1] == c || s[cur + 1] == 0))
+			word_num++;
+		cur++;
 	}
-	new_str[i] = '\0';
-	return (new_str);
+	return (word_num);
 }
 
-int	c_words(char const *s, char c)
+static int	split_words(char **result, char const *s, char c, int word)
 {
-	int	i;
-	int	num_words;
+	int		start_cur;
+	int		end_cur;
 
-	i = 0;
-	num_words = 0;
-	while (s[i])
+	end_cur = 0;
+	start_cur = 0;
+	while (s[end_cur])
 	{
-		while (s[i] && char_is_sep(s[i], c))
-			i++;
-		if (s[i] != '\0')
-			num_words++;
-		while (s[i] && !char_is_sep(s[i], c))
-			i++;
-	}
-	return (num_words);
-}
-
-char	**ft_splitter(char const *s, char c, char **result)
-{
-	int	i;
-	int	k;
-	int	start;
-
-	i = 0;
-	start = 0;
-	k = 0;
-	while (s[i])
-	{
-		while (s[i] && char_is_sep(s[i], c))
-			i++;
-		if (s[i] != '\0')
+		if (s[end_cur] == c || s[end_cur] == 0)
+			start_cur = end_cur + 1;
+		if (s[end_cur] != c && (s[end_cur + 1] == c || s[end_cur + 1] == 0))
 		{
-			start = i;
-			result[k] = ft_strdup_mod(s, c, start);
-			k++;
+			result[word] = malloc(sizeof(char) * (end_cur - start_cur + 2));
+			if (!result[word])
+			{
+				while (word++)
+					free(result[word]);
+				return (0);
+			}
+			ft_strlcpy(result[word], (s + start_cur), end_cur - start_cur + 2);
+			word++;
 		}
-		while (s[i] && !(char_is_sep(s[i], c)))
-			i++;
+		end_cur++;
 	}
-	result[k] = 0;
-	return (result);
+	result[word] = 0;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 
-	result = (char **) malloc (sizeof(char *) * (c_words(s, c) + 1));
+	if (!s)
+		return (NULL);
+	result = malloc(sizeof(char *) * (numwords(s, c) + 1));
 	if (!result)
 		return (NULL);
-	return (ft_splitter(s, c, result));
+	if (!split_words(result, s, c, 0))
+		return (NULL);
+	return (result);
 }
-/*
-int	main(void)
-{
-	int	i;
-	char	str[] = "heyyo whatsup my g you know";
-	char	**res;
 
-	i = 0;
-	res = ft_split(str, ' ');
-	while (res[i])
-	{
-		printf("%d.\t%s\n",i, res[i]);
-		i++;
-	}
-	printf("%d.\t%s",i, res[i]);
-	return (0);
-}*/

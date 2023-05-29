@@ -6,11 +6,12 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:49:23 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/14 17:14:25 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 15:52:28 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
 void ft_putstr_fd(char *s, int fd)
 {

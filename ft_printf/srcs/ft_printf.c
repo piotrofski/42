@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libftprintf.h"
+#include "../includes/ft_printf.h"
 #include "../includes/libft.h"
 
 void ft_putchar(char c)
@@ -50,7 +50,7 @@ char    *ft_utoa(unsigned int n)
 	int 	i;
 	
     digits = count_digs(n);
-	i = digits - 2; //bc count_digs adds 1 by default
+	i = digits - 2; 
     res = malloc (sizeof(char) * digits);
     while (i >= 0)
     {
@@ -72,7 +72,6 @@ int	count_digs_base(unsigned long nb, int base_len)
 		res++;
 		nb = nb / base_len;
 	}
-	// res++;
 	return (res);
 }
 
@@ -85,7 +84,7 @@ char    *ft_ultoa_base(unsigned long n, char *base)
 
 	base_len = ft_strlen(base);
     digits = count_digs_base(n, base_len);
-	i = digits - 1; //bc count_digs adds 1 by default
+	i = digits - 1;
     res = malloc (sizeof(char) * digits);
     while (i >= 0)
     {
@@ -119,7 +118,7 @@ void ft_s(va_list arg, t_print *tab)
 	}
 }
 
-void ft_p(va_list arg, t_print *tab) //finish this
+void ft_p(va_list arg, t_print *tab) 
 {
 	void *p = va_arg(arg, void *);
 	char *res;
@@ -215,9 +214,9 @@ void ft_check_flag(char c, va_list arg, t_print *tab)
 			ft_dispatch(i, arg, tab);
 			return;
 		}
-	if (i == ft_strlen(flags))
+	if (i == (int)ft_strlen(flags))
 	{
-		ft_putstr("(null)"); //means that it didn't find any flag
+		ft_putstr("(null)");
 		tab->total_length += 6;
 		return;
 	}
@@ -273,7 +272,7 @@ int	ft_printf(const char *format, ...)
 	va_end(arg);
 	return (tab.total_length);
 }
-
+/*
 int main()
 {
 	int num = 42;
@@ -294,4 +293,4 @@ int main()
 	printf("true = %d\n", resul2);
 	return (0);
 }
-
+*/

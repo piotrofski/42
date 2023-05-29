@@ -6,11 +6,12 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 14:50:36 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/14 17:14:39 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:29:08 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
 char	*ft_strcat(char *dest, char *src)
 {
@@ -48,18 +49,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		res[i] = s1[i];
 		i++; 
 	}
+	res[i] = '\0';
 	res = ft_strcat(res, (char *)s2);
 	return (res);
 }
-/*
-int	main(int argc, char **argv)
-{
-	char *res;
-	res = NULL;
-	if (argc)
-	{
-		res = ft_strjoin(argv[1], argv[2]);
-		printf("res: %s\n", res);
-	}
-	return (0);
-}*/

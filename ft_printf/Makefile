@@ -12,7 +12,7 @@
 
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ./srcs/*.c
@@ -32,19 +32,14 @@ $(LIBFT):
 
 $(NAME): $(LIBFT) $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	$(CC) $(CFLAGS) $(INCLUDES) -o $@ $(OBJS) $(LIBS) -o exec
-	./exec
-
 
 clean:
 	rm -f $(OBJS)
 	make clean -C $(LIBFT_DIR)
 
-
 fclean: clean
 	rm -f $(NAME)
 	make fclean -C $(LIBFT_DIR)
-	rm ./exec
 
 re: fclean all
 

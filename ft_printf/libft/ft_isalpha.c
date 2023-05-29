@@ -6,11 +6,12 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:07:13 by apiotrau          #+#    #+#             */
-/*   Updated: 2023/05/14 17:13:01 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:12:21 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
 int ft_isalpha(int c)
 {

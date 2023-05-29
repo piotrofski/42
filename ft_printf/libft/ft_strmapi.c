@@ -6,11 +6,12 @@
 /*   By: piotroff <piotroff@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 16:26:06 by piotroff          #+#    #+#             */
-/*   Updated: 2023/05/14 17:14:53 by piotroff         ###   ########.fr       */
+/*   Updated: 2023/05/11 19:23:42 by piotroff         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
