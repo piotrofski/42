@@ -15,20 +15,16 @@
 void *ft_calloc(size_t nmemb, size_t size)
 {
 	void *p;
+	size_t verif_size;
 
-	p = malloc (nmemb * size);
+	verif_size = nmemb * size;
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	if (verif_size / size != nmemb)
+		return (NULL);
+	p = malloc (verif_size);
 	if (!p)
 		return (NULL);
-	if (nmemb == 0 || size == 0)
-	{
-		p = NULL;
-		return (p);
-	}
-	if ((nmemb * size) > 2147483647)
-	{
-		p = NULL;
-		return (p);
-	}
-	ft_bzero(p, nmemb);
+	ft_bzero(p, verif_size);
 	return (p);
 }

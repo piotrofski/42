@@ -21,7 +21,7 @@ char *ft_strrchr(const char *s, int c)
 	i = ft_strlen(sDup);
 	while (i >= 0)
 	{
-		if (sDup[i] == c)
+		if (sDup[i] == (char) c)
 			return (&sDup[i]);
 		i--;
 	}
